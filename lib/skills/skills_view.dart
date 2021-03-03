@@ -81,9 +81,7 @@ final skills = [
   'Flutter',
   'Firebase',
   'HTML/CSS',
-  'Vue',
   'C#',
   'Unity',
   'Dart',
-  'Javascript',
 ];

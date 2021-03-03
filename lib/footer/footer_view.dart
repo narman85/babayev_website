@@ -25,7 +25,12 @@ class FooterDesktopView extends StatelessWidget {
       padding: kScreenPadding,
       child: Row(
         children: [
-          Text('© Nariman Babayev $currentYear  '),
+          Text(
+            '© Nariman Babayev $currentYear',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           Spacer(),
           for (final social in socials)
             IconButton(
@@ -69,7 +74,12 @@ class FooterMobileView extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          Text('© Nariman Babayev $currentYear'),
+          Text(
+            '© Nariman Babayev $currentYear',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           SizedBox(height: 20),
         ],
       ),

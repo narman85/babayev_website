@@ -1,6 +1,5 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:babayev_website/drawer/drawer_view.dart';
-import 'package:babayev_website/experience/experience_view.dart';
 import 'package:babayev_website/footer/footer_view.dart';
 import 'package:babayev_website/header/header_view.dart';
 import 'package:babayev_website/navigationbar/navigationbar_view.dart';
@@ -23,8 +22,7 @@ class PortfolioView extends StatefulWidget {
 class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   final projectKey = GlobalKey();
   final skillsKey = GlobalKey();
-  final experienceKey = GlobalKey();
-  final blogKey = GlobalKey();
+
   List<NavigationItem> navigationItems = [];
 
   final ScrollController scrollController = ScrollController(
@@ -36,7 +34,6 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
       navigationItems = [
         NavigationItem('Projects', key: projectKey),
         NavigationItem('Skills', key: skillsKey),
-        NavigationItem('Experiences', key: experienceKey),
       ];
     });
   }
@@ -66,7 +63,6 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 HeaderView(),
                 ProjectView(key: projectKey),
                 SkillsView(key: skillsKey),
-                ExperienceView(key: experienceKey),
                 FooterView(),
               ],
             ),

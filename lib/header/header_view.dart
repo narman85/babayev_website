@@ -29,7 +29,7 @@ class HeaderDesktopView extends StatelessWidget {
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
     return Container(
-      height: 864,
+      height: 500,
       width: kInitWidth,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -40,7 +40,7 @@ class HeaderDesktopView extends StatelessWidget {
             ),
             Image.asset(
               'images/nariman.webp',
-              height: isSmall ? imageWidth : 500,
+              height: isSmall ? imageWidth : 300,
             )
           ],
         ),
@@ -64,7 +64,10 @@ class HeaderMobileView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
       child: Column(
         children: [
-          Expanded(child: Image.asset('images/nariman.webp')),
+          Expanded(
+              child: Image.asset(
+            'images/nariman.webp',
+          )),
           HeaderBody(isMobile: true),
         ],
       ),

@@ -22,14 +22,25 @@ class ProjectItemBody extends StatelessWidget {
           style: Theme.of(context).textTheme.headline4,
         ),
         SizedBox(height: 10),
-        Text(item.description, style: TextStyle(fontSize: 17)),
+        Text(item.description,
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.white,
+              fontWeight: FontWeight.w100,
+            )),
         SizedBox(height: 10),
         Row(
           children: [
             for (final tech in item.technologies)
               Padding(
                 padding: const EdgeInsets.only(right: 8.0),
-                child: Chip(label: Text(tech)),
+                child: Chip(
+                  label: Text(
+                    tech,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  backgroundColor: Colors.purple,
+                ),
               )
           ],
         ),
