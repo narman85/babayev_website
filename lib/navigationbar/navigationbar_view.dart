@@ -68,13 +68,16 @@ class NavigationMobileView extends StatelessWidget {
         children: [
           SizedBox(width: 20),
           Image.asset(
-            'images/navbar_logo.png',
+            'images/nariman.webp',
             height: 24,
           ),
           Spacer(),
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () => Scaffold.of(context).openEndDrawer(),
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () => Scaffold.of(context).openEndDrawer(),
+            ),
           )
         ],
       ),

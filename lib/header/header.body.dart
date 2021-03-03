@@ -22,7 +22,7 @@ class HeaderBody extends StatelessWidget {
           style: GoogleFonts.montserrat(
             fontSize: 100,
             color: Colors.white,
-            fontWeight: FontWeight.w100,
+            fontWeight: FontWeight.w200,
           ),
           maxLines: 1,
         ),
@@ -36,7 +36,7 @@ class HeaderBody extends StatelessWidget {
           'I have 1 year of experience in mobile and web development in building beautiful apps',
           style: GoogleFonts.montserrat(
             fontSize: 25,
-            color: Colors.purple,
+            color: Colors.white,
             fontWeight: FontWeight.w200,
           ),
           maxLines: 3,
@@ -48,8 +48,7 @@ class HeaderBody extends StatelessWidget {
               color: Colors.purple,
             ),
             child: TextButton(
-              onPressed: () => launch(
-                  "mailto:babayev1994@gmail.com?subject=News&body=New%20plugin"),
+              onPressed: () => mailto(),
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   vertical: isMobile ?? false ? 10 : 17,
@@ -66,5 +65,17 @@ class HeaderBody extends StatelessWidget {
             )).moveUpOnHover,
       ],
     );
+  }
+}
+
+mailto() async {
+  const url = 'mailto:babayev1994@gmail.com?subject=Hello&body=';
+  print("test url1");
+  if (await canLaunch(url) == true) {
+    print("test url2");
+    await launch(url);
+  } else {
+    print("test url3");
+    throw 'Could not launch $url';
   }
 }

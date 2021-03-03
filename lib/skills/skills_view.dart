@@ -2,7 +2,6 @@ import 'package:babayev_website/components/desktop_view_builder.dart';
 import 'package:babayev_website/components/mobile_desktop_view_builder.dart';
 import 'package:babayev_website/components/mobile_view_builder.dart';
 import 'package:flutter/material.dart';
-
 import 'outline_skills_container.dart';
 
 class SkillsView extends StatelessWidget {
@@ -80,8 +79,5 @@ class SkillsMobileView extends StatelessWidget {
 final skills = [
   'Flutter',
   'Firebase',
-  'HTML/CSS',
-  'C#',
-  'Unity',
   'Dart',
 ];
